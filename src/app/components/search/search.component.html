@@ -1,0 +1,10 @@
+<p>search works!</p>
+
+<input type="text" (input)="search($event)" #mySearch>
+
+<ng-container *ngIf="mySearch.value">
+    <div *ngFor="let character of characters$ | async">
+        <img [src]="character.image" alt="">
+        <p>{{ character.name }}</p>
+    </div>
+</ng-container>

@@ -1,0 +1,13 @@
+<form [formGroup]="form">
+    <label for="">Name</label>
+    <input type="text" formControlName="name">
+
+    <label for="">Age</label>
+    <input type="text" formControlName="age">
+
+    <button (click)="filter()">Filtrar</button>
+</form>
+
+{{ form.value | json }}
+
+<app-report1 [mensaje]="123"></app-report1>

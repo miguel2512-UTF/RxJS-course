@@ -1,0 +1,10 @@
+<!-- 
+Pipe async -> | async
+
+Con este pipe lo que hacemos es resolver el observable. Es decir, se va a suscribir
+al observable para obtener la data.
+Ventaja: Cuando el componente no sea cargado (cambio de ruta, página, etc.), 
+automaticamente se va a desuscribir del observable. 
+-->
+{{ value$ | async | json }}
+{{ mensaje }}

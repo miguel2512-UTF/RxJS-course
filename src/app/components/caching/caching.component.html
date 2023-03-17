@@ -1,0 +1,15 @@
+<p> 
+    <!-- 
+    Cada subscriptor realiza una petición independiente 
+    -->
+    Repeat 1
+    {{ data$ | async | json }}
+
+    <br><br>
+    <!-- 
+    Con el operador share() se comparte la misma información para cada suscriptor,
+    de esta forma solo se realiza una petición en lugar de 2. 
+    -->
+    Repeat 2
+    {{ data$ | async | json }}
+</p>
