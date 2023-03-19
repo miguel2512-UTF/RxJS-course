@@ -1,0 +1,58 @@
+<div class="sidebar" [ngClass]="{active: sidebar}">
+    <div class="sidebar-content">
+        <div class="sidebar-item">
+            <span [routerLink]="['/http']">Http RxJS</span>
+        </div>
+        <div class="sidebar-item">
+            <span [routerLink]="['/forms']">Forms RxJS</span>            
+        </div>
+        <div class="sidebar-item">
+            <span>Observables Types</span>
+            <mat-icon (click)="expandSidebarItem($event)">chevron_right</mat-icon>
+            <div class="sidebar-item-list">
+                <span><a [routerLink]="['/types/hot']">Hot</a></span>
+                <span><a [routerLink]="['/types/cold']">Cold</a></span>
+            </div>
+        </div>
+        <div class="sidebar-item">
+            <span [routerLink]="['/operators']">Operators</span>
+            <mat-icon (click)="expandSidebarItem($event)">chevron_right</mat-icon>
+            <div class="sidebar-item-list">
+                <span><a href="">Tap</a></span>
+                <span><a href="">Map</a></span>
+                <span><a href="">SwitchMap</a></span>
+            </div>
+        </div>
+        <div class="sidebar-item">
+            <span [routerLink]="['/higher-order']">Higher Order Observables</span>
+        </div>
+        <div class="sidebar-item">
+            <span [routerLink]="['/subject']">Subject</span>
+        </div>
+        <div class="sidebar-item">
+            <span [routerLink]="['/behaviorsubject']">Behavior Subject</span>
+        </div>
+        <div class="sidebar-item">
+            <span [routerLink]="['/error-handling-rxjs']">Error Handling</span>
+        </div>
+        <div class="sidebar-item">
+            <span>Performance</span>
+            <mat-icon (click)="expandSidebarItem($event)">chevron_right</mat-icon>
+            <div class="sidebar-item-list">
+                <span><a [routerLink]="['/unsubscribe']">Unsubscribe</a></span>
+                <span><a [routerLink]="['/caching']">Caching</a></span>
+            </div>
+        </div>
+        <div class="sidebar-item">
+            <span>Ejercicio práctico</span>
+            <mat-icon (click)="expandSidebarItem($event)">chevron_right</mat-icon>
+            <div class="sidebar-item-list">
+                <span><a [routerLink]="['/search']">Search</a></span>
+            </div>
+        </div>
+        <div class="sidebar-item">
+            <span [routerLink]="['/testing']">Testing</span>
+        </div>
+    </div>
+</div>
+<div class="backdrop" [ngClass]="{active: sidebar}"></div>

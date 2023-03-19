@@ -12,8 +12,10 @@ import { SearchComponent } from './components/search/search.component';
 import { SubjectComponent } from './components/subject/subject.component';
 import { TestingComponent } from './components/testing/testing.component';
 import { UnSubscribeComponent } from './components/unsubscribe-observables/unsubscribe.component';
+import { HomeComponent } from './pages/home/home.component';
 
 const routes: Routes = [
+  { path: '', component: HomeComponent},
   { path: 'operators', component: OperatorsComponent },
   { path: 'types/cold', component: ColdComponent },
   { path: 'types/hot', component: HotComponent },

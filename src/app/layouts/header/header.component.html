@@ -1,0 +1,16 @@
+<header class="header">
+    <div class="header-logo">
+        <button mat-icon-button (click)="toggleSidebar()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <h1 class="header-title" [routerLink]="['']">RxJS <span>Course</span></h1>
+    </div>
+    <div class="header-links">
+        <a href="" class="link-item">Principal</a>
+        <a href="" class="link-item">Objetivos</a>
+        <a href="" class="link-item">Conceptos</a>
+    </div> 
+</header>
+
+<!-- Sidebar Component -->
+<app-sidebar [sidebar]="sidebarState"></app-sidebar>

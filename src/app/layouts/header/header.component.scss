@@ -1,0 +1,48 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background-color: var(--primary);
+    z-index: 3;
+    box-shadow: 0 2px 5px #0000004d;
+
+    .header-logo{
+        display: flex;
+        align-items: center;
+        color: white;
+
+        .header-menu{
+            cursor: pointer;
+        }
+
+        .header-title{
+            font-weight: 600;
+            letter-spacing: 5px;
+            margin: 0px 5px;
+            cursor: pointer;
+
+            span{
+                font-weight: 200;
+                letter-spacing: normal;
+            }
+        }
+    }
+
+    .header-links{
+
+        .link-item{
+            color: white;
+            margin: 0 15px;
+            transition: color 0.5s ease;
+        }
+
+        .link-item:hover{
+            transition: color 0.5s ease;
+            color: rgba($color: white, $alpha: 0.6);
+        }
+    }
+}
