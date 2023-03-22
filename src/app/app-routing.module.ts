@@ -5,6 +5,7 @@ import { CachingComponent } from './components/caching/caching.component';
 import { ErrorHandlingRxjsComponent } from './components/error-handling-rxjs/error-handling-rxjs.component';
 import { FormsRxjsComponent } from './components/forms-rxjs/forms-rxjs.component';
 import { HigherOrderObservablesComponent } from './components/higher-order-observables/higher-order-observables.component';
+import { HttpRxjsComponent } from './components/http-rxjs/http-rxjs.component';
 import { ColdComponent } from './components/observables-types/cold/cold.component';
 import { HotComponent } from './components/observables-types/hot/hot.component';
 import { OperatorsComponent } from './components/operators/operators.component';
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'operators', component: OperatorsComponent },
   { path: 'types/cold', component: ColdComponent },
   { path: 'types/hot', component: HotComponent },
+  { path: 'http-rxjs', component: HttpRxjsComponent },
   { path: 'forms', component: FormsRxjsComponent },
   { path: 'higher-order', component: HigherOrderObservablesComponent },
   { path: 'subject', component: SubjectComponent },
