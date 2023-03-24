@@ -24,12 +24,14 @@ import { HeaderComponent } from './layouts/header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { SidebarComponent } from './layouts/sidebar/sidebar.component';
+import { FooterComponent } from './layouts/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     SidebarComponent,
+    FooterComponent,
     OperatorsComponent,
     TestingComponent,
     FormsRxjsComponent,
