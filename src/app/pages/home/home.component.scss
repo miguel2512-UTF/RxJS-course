@@ -48,6 +48,16 @@
     }
 }
 
+.content-body{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.content-body div:first-child{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
 .about-basic-concepts{
     margin: 50px 0px;
     text-align: center;

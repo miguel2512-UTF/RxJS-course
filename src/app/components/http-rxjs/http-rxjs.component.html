@@ -1,1 +1,23 @@
-<p>http-rxjs works!</p>
+<h1 class="content-title">Peticiones Http</h1>
+
+<div class="content-doc">
+    <p class="content-desc">Peticiones a una API mediante el uso de HttpClient de Angular y RxJS para manipular y obtener la data.</p>
+    
+    <h2>1. Obtenemos la data modificada</h2>
+    <p><strong>JSON:</strong> {{ dataModificada | json }}</p>
+    
+    <h2>2. Obtenemos la data del personaje y su especie</h2>
+    <p><strong>JSON:</strong> {{ characterData | json }}</p>
+    
+    <strong>Personaje:</strong> 
+    <ul>
+        <li>{{ characterData.personaje.name }}</li>
+        <li>{{ characterData.personaje.height }}</li>
+    </ul>
+    
+    <strong>Especie:</strong>
+    <ul>
+        <li>{{ characterData.especie.name }}</li>
+        <li>{{ characterData.especie.classification }}</li>
+    </ul>
+</div>

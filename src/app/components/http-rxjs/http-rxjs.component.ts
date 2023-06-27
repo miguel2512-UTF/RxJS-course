@@ -1,5 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { ApiService } from './services/api.service';
+import { Character } from '../error-handling-rxjs/service/rick-morty-data.service';
 
 @Component({
   selector: 'app-http-rxjs',
@@ -10,6 +11,17 @@ export class HttpRxjsComponent implements OnInit {
   // Cuando nos suscribimos a un observable que viene de una petición http
   // Angular automaticamente al recibir la información de este se desuscribe
   apiService = inject(ApiService)
+  dataModificada!:{}
+  characterData!: {
+    personaje:{
+      name: string,
+      height: string
+    },
+    especie:{
+      name: string,
+      classification: string
+    }
+  }
 
   ngOnInit(): void {
       this.obtenerData()
@@ -18,11 +30,17 @@ export class HttpRxjsComponent implements OnInit {
 
   obtenerData(){
     // Obtenemos la data modificada
-    this.apiService.getData().subscribe(data => console.log(data))
+    this.apiService.getData().subscribe(data => {
+      this.dataModificada = data
+      console.log(data)
+    })
   }
 
   // Obtenemos la data del personaje y su especie
   ObtenerEspecie(){
-    this.apiService.getAllData().subscribe(data => console.log(data))
+    this.apiService.getAllData().subscribe(data => {
+      this.characterData = data
+      console.log(data)
+    })
   }
 }
